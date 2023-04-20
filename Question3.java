@@ -12,5 +12,11 @@ public class Question3
      
     Scanner in = new Scanner(System.in);
     
+    //System.out.print("Enter an integer: ");
+    int toSquare = in.nextInt();
+
+    int ans = toSquare * toSquare;
+    System.out.println(ans);
+    
   }
 }
