@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Question5
 {
@@ -27,6 +27,33 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    
+    //System.out.print("Enter the number of integers: ");
+    int n = in.nextInt();
+
+    int[] arr = new int[n];
+    
+    //System.out.print("Enter integers: ");
+    for (int i = 0; i < n; i++) {
+      arr[i] = in.nextInt();
+    }
+
+    int mode = arr[0];
+    int maxCount = 1;
+    for (int i = 0; i < n; i++) {
+        int count = 1;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] == arr[i]) {
+                count++;
+            }
+        }
+        if (count > maxCount) {
+            mode = arr[i];
+            maxCount = count;
+        }
+    }
+
+    System.out.print(mode);
     
   }
 }
