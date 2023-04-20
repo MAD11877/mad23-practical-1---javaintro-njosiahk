@@ -15,7 +15,7 @@ public class Question3
     //System.out.print("Enter an integer: ");
     int toSquare = in.nextInt();
 
-    double ans = toSquare * toSquare;
+    int ans = toSquare * toSquare;
     System.out.println(ans);
     
   }
